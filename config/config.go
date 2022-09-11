@@ -77,6 +77,7 @@ queue:
     group: gorush
     consumer: gorush
     stream_name: gorush
+	maxleng: 1000
 
 ios:
   enabled: false
@@ -245,6 +246,7 @@ type SectionNATS struct {
 type SectionRedisQueue struct {
 	Addr       string `yaml:"addr"`
 	StreamName string `yaml:"stream_name"`
+	Maxleng    int    `yaml:"maxleng"`
 	Group      string `yaml:"group"`
 	Consumer   string `yaml:"consumer"`
 }
@@ -407,6 +409,7 @@ func LoadConf(confPath ...string) (*ConfYaml, error) {
 	conf.Queue.NATS.Queue = viper.GetString("queue.nats.queue")
 	conf.Queue.Redis.Addr = viper.GetString("queue.redis.addr")
 	conf.Queue.Redis.StreamName = viper.GetString("queue.redis.stream_name")
+	conf.Queue.Redis.Maxleng = viper.GetInt("queue.redis.maxleng")
 	conf.Queue.Redis.Group = viper.GetString("queue.redis.group")
 	conf.Queue.Redis.Consumer = viper.GetString("queue.redis.consumer")
 
