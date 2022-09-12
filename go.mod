@@ -17,7 +17,6 @@ require (
 	github.com/golang-queue/nats v0.0.8
 	github.com/golang-queue/nsq v0.1.1
 	github.com/golang-queue/queue v0.1.3
-	github.com/golang-queue/redisdb-stream v0.0.2
 	github.com/golang/protobuf v1.5.2
 	github.com/json-iterator/go v1.1.12
 	github.com/mattn/go-isatty v0.0.14
@@ -25,10 +24,11 @@ require (
 	github.com/msalihkarakasli/go-hms-push v0.0.0-20210731212030-00e7b986815b
 	github.com/prometheus/client_golang v1.12.2
 	github.com/rs/zerolog v1.27.0
+	github.com/shubhshekhar09/redisdb-stream v0.0.11
 	github.com/sideshow/apns2 v0.23.0
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/viper v1.12.0
-	github.com/stretchr/testify v1.7.5
+	github.com/stretchr/testify v1.8.0
 	github.com/syndtr/goleveldb v1.0.0
 	github.com/thoas/stats v0.0.0-20190407194641-965cb2de1678
 	github.com/tidwall/buntdb v1.2.9

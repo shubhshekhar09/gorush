@@ -25,7 +25,7 @@ import (
 	"github.com/golang-queue/nsq"
 	"github.com/golang-queue/queue"
 	qcore "github.com/golang-queue/queue/core"
-	redisdb "github.com/shubhshekhar09/redisdb-stream"
+	"github.com/shubhshekhar09/redisdb-stream"
 )
 
 func main() {
@@ -334,7 +334,7 @@ func main() {
 			redisdb.WithStreamName(cfg.Queue.Redis.StreamName),
 			redisdb.WithGroup(cfg.Queue.Redis.Group),
 			redisdb.WithConsumer(cfg.Queue.Redis.Consumer),
-			redisdb.WithMaxleng(cfg.Queue.Redis.Maxleng)
+			redisdb.WithMaxlength(cfg.Queue.Redis.Maxlength),
 			redisdb.WithRunFunc(notify.Run(cfg)),
 			redisdb.WithLogger(logx.QueueLogger()),
 		)
